@@ -1,25 +1,23 @@
 package com.ll.chatApp.domain.chat.chatMessage.service;
 
-
 import com.ll.chatApp.domain.chat.chatMessage.entity.ChatMessage;
-import com.ll.chatApp.domain.chatroom.entity.ChatRoom;
-import com.ll.chatApp.domain.chatroom.repository.ChatRoomRepository;
+import com.ll.chatApp.domain.chat.chatMessage.repository.ChatMessageRepository;
+import com.ll.chatApp.domain.chat.chatRoom.entity.ChatRoom;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
 public class ChatMessageService {
-    private final ChatRoomRepository chatRoomRepository;
+    private final ChatMessageRepository chatMessageRepository;
 
-    public void create(ChatRoom chatRoom, String writerName, String content){
+    public void create(ChatRoom chatRoom, String writerName, String content) {
         ChatMessage chatMessage = ChatMessage.builder()
-                .chatroom(chatRoom)
+                .chatRoom(chatRoom)
                 .writerName(writerName)
                 .content(content)
                 .build();
 
-        chatRoomRepository.save(chatRoom);
+        chatMessageRepository.save(chatMessage);
     }
-
 }

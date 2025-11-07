@@ -1,8 +1,8 @@
-package com.ll.chatApp.domain.chatroom.service;
+package com.ll.chatApp.domain.chat.chatRoom.service;
 
 
-import com.ll.chatApp.domain.chatroom.entity.ChatRoom;
-import com.ll.chatApp.domain.chatroom.repository.ChatRoomRepository;
+import com.ll.chatApp.domain.chat.chatRoom.entity.ChatRoom;
+import com.ll.chatApp.domain.chat.chatRoom.repository.ChatRoomRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
