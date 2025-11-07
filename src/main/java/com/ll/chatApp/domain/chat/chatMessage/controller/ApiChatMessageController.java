@@ -17,7 +17,7 @@ public class ApiChatMessageController {
     @PostMapping("/api/v1/chat/rooms/{roomId}/messages")
     public String createChatMessages(@PathVariable("roomId") Long roomId){
 
-        return roomId + "번 채팅방 생성 완료";
+        return roomId + "번 메세지 생성 완료";
     }
 
 }
